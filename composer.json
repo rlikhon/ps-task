@@ -1,0 +1,43 @@
+{
+    "name": "Commission Generator",
+    "description": "This is a warmup coding.",
+    "keywords": [],
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "CommissionGenerator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CommissionGenerator\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=7.1",
+        "ext-bcmath": "*",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "moneyphp/money": "^3.3",
+        "nesbot/carbon": "^2.46",
+        "symfony/cache": "^5.2",
+        "symfony/config": "^5.2",
+        "symfony/console": "^5.2",
+        "symfony/dotenv": "^5.2",
+        "symfony/filesystem": "^5.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "2.18",
+        "phpunit/phpunit": "^6"
+    },
+    "config": {
+        "sort-packages": true,
+        "bin-dir": "bin"
+    },
+    "scripts": {
+        "phpunit": "phpunit",
+        "fix-cs": "php-cs-fixer fix",
+        "test-cs": "php-cs-fixer fix --dry-run -v",
+        "test": ["@phpunit", "@test-cs"]
+    }
+}
